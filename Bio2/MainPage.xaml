@@ -20,12 +20,17 @@
             <local:BilletCatalog/>
             </ListView.DataContext>
         </ListView>
-        <ListView ItemsSource="{Binding Sale }">
-            <ListView.DataContext>
+        <ComboBox ItemsSource="{Binding Sale }">
+            <ComboBox.DataContext>
                 <local:SalCatalog/>
+            </ComboBox.DataContext>
+        </ComboBox>
+        <ListView ItemsSource="{Binding Forestillinger}">
+            <ListView.DataContext>
+                <local:ForestillingCatalog/>
             </ListView.DataContext>
         </ListView>
-       
+        <Button Content="Køb" Command="{Binding BuyCommand}"/>
     </StackPanel>
    
    
